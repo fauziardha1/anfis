@@ -3,7 +3,7 @@ import membership.mfDerivs
 import membership.membershipfunction
 import numpy
 
-ts = numpy.loadtxt("beasiswa.txt", usecols=[1,2,3])#numpy.loadtxt('c:\\Python_fiddling\\myProject\\MF\\trainingSet.txt',usecols=[1,2,3])
+ts = numpy.loadtxt("trainingSet.txt", usecols=[1,2,3])#numpy.loadtxt('c:\\Python_fiddling\\myProject\\MF\\trainingSet.txt',usecols=[1,2,3])
 X = ts[:,0:2]
 Y = ts[:,2]
 
@@ -25,5 +25,5 @@ anf.plotErrors()
 print("Plotting results")
 anf.plotResults()
 
-X = numpy.array([[0,0]])
+X = numpy.array([[10,10]])
 print(anfis.predict(anf,X))
